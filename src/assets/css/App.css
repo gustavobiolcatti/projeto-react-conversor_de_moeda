@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+/* RESET-CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* PRE-SET */
+
+.titulo {
+  margin-bottom: 3.2rem;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 0 5px #000000;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.titulo--principal {
+  margin-top: 1.5em;
+}
+
+.subtitulo {
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #000000;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.texto {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+}
+
+/*  */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+	background-image: url("https://www.investopedia.com/thmb/spfLaJj0LkGnU3LwR10SWvJPkEo=/2600x1294/filters:fill(auto,1)/GettyImages-1153657433_2600-573e917e27f9442eb87ac10f45ce43ea.jpg");
+}
+
+/*  */
+
+.principal {
+  display: grid;
+  width: 940px;
+  padding: 2em;
+  margin: auto;
+  gap: 16px;
+  grid-template-areas: 
+      "formulario formulario cotacao" 
+      "resultado resultado cotacao";
+  grid-template-columns: 1fr .5fr .8fr;
+  box-sizing: border-box;
+}
+
+/*  */
+
+#formulario {
+  padding: 2em;
+  grid-area: formulario;
+  background: linear-gradient(45deg, #ffffff90, #76767690);
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.formulario__fieldset-radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.formulario__label .texto {
+  font-size: 2em;
+}
+
+.formulario__valor {
+  display: block;
+  width: 70%;
+  padding: .75em;
+  margin: 2em auto 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+  box-shadow: 0 0 5px #000000;
+  box-sizing: border-box;
+}
+
+.formulario__botao {
+  width: 30%;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  box-shadow: 0 0 5px #000000;
+  cursor: pointer;
+}
+
+/*  */
+
+#resultado {
+  padding: 2em;
+  grid-area: resultado;
+  background: linear-gradient(45deg, #ffffff90, #76767690);
+  border-radius: 15px;
+  font-size: 1.6rem;
+}
+
+#cotacao {
+  padding: 2em;
+  grid-area: cotacao;
+  background: linear-gradient(45deg, #ffffff90, #76767690);
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 15px;
+}

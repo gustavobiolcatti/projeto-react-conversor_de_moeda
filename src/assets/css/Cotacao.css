@@ -1,0 +1,17 @@
+.cotacao__lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.cotacao__item {
+    display: flex;
+    height: 100%;
+    padding: 1.5em;
+    background-color: #1d1e22;
+	border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}

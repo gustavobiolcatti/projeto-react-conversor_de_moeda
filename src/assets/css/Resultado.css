@@ -1,0 +1,16 @@
+.resultado__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.resultado__box {
+    padding: 1em;
+    background-color: #1d1e22;
+	border-radius: 10px;
+}
+
+.resultado__texto {
+    margin-top: 2em;
+    text-align: center;
+}
