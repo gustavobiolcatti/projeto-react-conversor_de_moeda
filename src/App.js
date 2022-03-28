@@ -40,9 +40,9 @@ export class App extends Component {
 
   obterOpcao(e) {
     const state = this.state
-    let valor = e.target.value
+    const valor = e.target.value
 
-    if (state.valor === "") {
+    if (state.valor === null) {
       state.valor = 0
     }
     else if (isNaN(valor)) {
@@ -51,18 +51,19 @@ export class App extends Component {
     else {
       state.valor = valor
     }
-
+    
     this.setState(state)
     this.obterCotacao()
   }
 
   obterCotacao() {
     const state = this.state
+    state.stringCotacao = ""
 
     for (let i in state.simbolo) {
       if (state.opcao !== i) state.stringCotacao += `${i}-${state.opcao}`;
     }
-
+    
     state.stringCotacao = state.stringCotacao.replace(/(.{7})?(.{7})?(.{7})/, "$1,$2,$3")
 
     
@@ -70,7 +71,6 @@ export class App extends Component {
       .then(resposta => resposta.json())
       .then(json => exibirCotacao(json))
       .finally(() => {
-        state.stringCotacao = ""
         this.setState(state)
         this.exibirResultado()
       });
@@ -102,7 +102,6 @@ export class App extends Component {
     state.convertidoBitcoin = (state.valor / state.cotacaoBitcoin).toFixed(6);
 
     this.setState(state)
-    console.log(state)
   }
 
   render() {

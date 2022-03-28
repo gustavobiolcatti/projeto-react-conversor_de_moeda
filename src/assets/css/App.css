@@ -121,8 +121,10 @@ body {
 
 .formulario__fieldset-radio {
   display: flex;
+  width: 70%;
+  margin: auto;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .formulario__label .texto {
